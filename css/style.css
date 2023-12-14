@@ -26,11 +26,22 @@
 
 .all-items {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     text-align: center;
     margin-top: 2%;
 }
+
+.search-bar {
+    border: 1px solid #000;
+    border-radius: 4px;
+}
+
+.search-bar input{
+    width: 330px;
+    height: 40px;
+}
+
 
 .nav-bar-icon {
     margin: 15%;
@@ -39,6 +50,7 @@
 .nav-bar {
     
 }
+
 
 nav {
     display: flex;
@@ -106,10 +118,6 @@ video {
     width: 100%;
 }
 
-.search-bar {
-    border: 1px solid #000;
-    border-radius: 4px;
-}
 
 .cards-1 {
     display: flex;
