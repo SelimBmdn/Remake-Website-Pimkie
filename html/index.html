@@ -23,6 +23,9 @@
 </head>
 
 <body>
+    <div class="timer">
+        <div id="compteRebours"></div>
+    </div>
     <header>
         <div class="over-items">
 
@@ -39,19 +42,19 @@
 
             <div class="nav-bar">
                 <nav>
-                    <div class="heart-icon">
+                    <div class="nav-bar-icon">
                         <i class="fa-regular fa-heart"></i>
                     </div>
 
-                    <div class="location-icon">
+                    <div class="nav-bar-icon">
                         <i class="fa-solid fa-location-dot"></i>
                     </div>
 
-                    <div class="user-icon">
+                    <div class="nav-bar-icon">
                         <i class="fa-regular fa-user"></i>
                     </div>
 
-                    <div class="basket-icon">
+                    <div class="nav-bar-icon">
                         <i class="fa-solid fa-basket-shopping"></i>
                     </div>
 
@@ -62,12 +65,13 @@
         </div>
 
         <div class="under-items">
-            <p>Noël</p>
-            <p>Nouveautés</p>
-            <p>Vétements</p>
-            <p>Chaussures</p>
-            <p>Accessoires</p>
-            <p>Ofres Spéciales</p>
+            <button>Noël</button>
+            <button>Nouveautés</button>
+            <button>Vétements</button>
+            <button>Chaussures</button>
+            <button>Accessoires</button>
+            <button>Ofres Spéciales</button>
+            
         </div>
     </header>
 
@@ -198,43 +202,162 @@
 
     <footer>
         <div class="footer-top">
+            <div class="livraison">
+                <div class="icon-footer-top">
+                <i class="fa-solid fa-truck"></i>
+                </div>
+                
+                <h4><strong>Livraison gratuite en magasin</strong></h4>
+                <p>
+                    et dès 49€ à domicile et en point relais
+                </p>
+
+
+            </div>
+
+            <div class="Pay">
+                <div class="icon-footer-top">
+                <i class="fa-regular fa-credit-card"></i>
+            </div>
+                <h4>Paiement sécurisé</h4>
+                <p>CB - Paypal - 3 fois sans frais</p>
+                
+            </div>
+
+            <div class="Return">
+                <div class="icon-footer-top">
+                <i class="fa-solid fa-arrow-rotate-left"></i>
+            </div>
+                <h4>Retours gratuits en magasin</h4>
+                <p>sous 30 jours</p>
+            </div>
+
+            <div class="e-reservation">
+                <div class="icon-footer-top">
+                <i class="fa-solid fa-desktop"></i>
+            </div>
+                <h4>E-réservation gratuite</h4>
+                <p>sous 1h en magasin</p>
+                
+            </div>
 
         </div>
 
         <div class="footer-middle">
+
+            <div class="newsletter">
+                <h4>Newsletter Pimkie</h4>
+                <input type="search" id="newsletter" name="q" placeholder="@mon email" />
+            </div>
+
+            <div class="social-media">
+                <i class="fa-brands fa-instagram"></i>
+
+
+                <i class="fa-brands fa-tiktok"></i>
+
+                <i class="fa-brands fa-pinterest"></i>
+
+                <i class="fa-brands fa-facebook"></i>
+
+
+
+            </div>
+
+            <div class="download-app">
+
+            </div>
 
         </div>
 
         <div class="footer-bottom">
             <div class="need-help">
                 <h3>Besoin d'aide</h3>
-
+                <a href="">Livraison</a>
+                <a href="">Paiement</a>
+                <a href="">Suivi de commande</a>
+                <a href="">Retours</a>
+                <a href="">Aide - FAQ</a>
             </div>
 
 
+
+            <div class="inside-footer-bottom">
             <div class="services">
                 <h3>Services</h3>
-
+                <a href="">E-reservation</a>
+                <a href="">Programme de fidélité</a>
+                <a href="">Carte cadeau</a>
             </div>
+        </div>
 
+
+            <div class="inside-footer-bottom">
             <div class="inspi">
                 <h3>Inspiration</h3>
-
-            </div>
-
-            <div class="about-pimkie">
-                <h3>À propos de Pimkie</h3>
-
-            </div>
-
-            <div class="contact-us">
-                <h3>Contactez-nous</h3>
+                <a href="">Le Mag'</a>
+                <a href="">Offres spéciales</a>
+                <a href="">Pimkie Live</a>
+                <a href="">#Pimkiexme</a>
 
             </div>
         </div>
 
+
+            <div class="inside-footer-bottom">
+            <div class="about-pimkie">
+                <h3>À propos de Pimkie</h3>
+                <a href="">Les magasins</a>
+                <a href="">Pimkie positive</a>
+                <a href="">Recrutement</a>
+
+            </div>
+        </div>
+
+
+            <div class="inside-footer-bottom">
+            <div class="contact-us">
+                <h3>Contactez-nous</h3>
+                <p> 03 59 55 38 61*</p>
+                <p>*Notre service clients
+                    est à votre écoute
+                    du lundi au vendredi
+                    de 9h00 à 19h00 </p>
+
+            </div>
+        </div>
+    </div>
+
     </footer>
 
+
+    <script>
+        // Fonction pour démarrer le compte à rebours
+        function demarrerCompteRebours(dureeEnSecondes) {
+            var compteReboursDiv = document.getElementById('compteRebours');
+
+            var compteReboursInterval = setInterval(function () {
+                // Calculer les minutes et les secondes restantes
+                var minutes = Math.floor(dureeEnSecondes / 60);
+                var secondes = dureeEnSecondes % 60;
+
+                // Afficher le compte à rebours dans la div
+                compteReboursDiv.textContent = minutes + 'm ' + secondes + 's';
+
+                // Décrémenter la durée
+                dureeEnSecondes--;
+
+                // Vérifier si le compte à rebours est terminé
+                if (dureeEnSecondes < 0) {
+                    clearInterval(compteReboursInterval);
+                    compteReboursDiv.textContent = 'Temps écoulé !';
+                }
+            }, 1000); // Mettre à jour toutes les 1000 ms (1 seconde)
+        }
+
+        // Démarrer le compte à rebours avec une durée de 5 minutes (300 secondes)
+        demarrerCompteRebours(180);
+    </script>
 </body>
 
 
