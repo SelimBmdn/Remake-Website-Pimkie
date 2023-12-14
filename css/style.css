@@ -1,0 +1,68 @@
+@media (max-width: 575.98px) { 
+	
+}
+
+
+.all-items {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-bar {
+    
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+
+.under-items {
+    display: flex;
+    justify-content: space-around;
+}
+
+.logo-pimkie {
+    width: 30%;
+}
+.logo-pimkie img {
+    height: 75px;
+}
+
+.promo-banniere img {
+    width: 100%;
+}
+
+.cards-1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.pimkiexme {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.button-and-over {
+    color: white;
+    background-color: black;
+    
+    
+}
+
+.button-and-over :hover {
+    background-color: white;
+    color: black;
+}
+
+.more {
+    text-align: center;
+    font-size: small;
+}
